@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq08d1omntq72"]
+
+[ext_resource type="Script" path="res://Scripts/hurtWall.gd" id="1_4w0ek"]
+[ext_resource type="Texture2D" uid="uid://q8gialqr30v8" path="res://Assests/tilemap_packed.png" id="1_x6qa5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as6up"]
+size = Vector2(14, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjl3y"]
+size = Vector2(18, 18)
+
+[node name="Node2D" type="StaticBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_4w0ek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_as6up")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x6qa5")
+region_enabled = true
+region_rect = Rect2(126, 36, 18, 18)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pjl3y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

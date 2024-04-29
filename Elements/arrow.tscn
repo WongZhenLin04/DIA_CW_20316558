@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://by8q0ulil5otj"]
+
+[ext_resource type="Texture2D" uid="uid://ciksn2h27phlw" path="res://Assests/arrowSprite.png" id="1_d11eh"]
+[ext_resource type="Script" path="res://Scripts/arrow.gd" id="1_ogm8u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pi26"]
+size = Vector2(16, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuy0d"]
+size = Vector2(20, 5)
+
+[node name="Arrow" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_ogm8u")
+
+[node name="ArrowHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_0pi26")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d11eh")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_vuy0d")
+
+[node name="WallCheckL" type="RayCast2D" parent="."]
+position = Vector2(-10, 0)
+target_position = Vector2(-4, 0)
+
+[node name="WallCheckR" type="RayCast2D" parent="."]
+position = Vector2(10, 0)
+target_position = Vector2(4, 0)
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_arrow_hit"]

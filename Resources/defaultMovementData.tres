@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://ciqf6lcs0lts6"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterMovement/PlayerMoveData.gd" id="1_i1wb1"]
+
+[resource]
+script = ExtResource("1_i1wb1")
+JumpForce = -400
+gravity = 1000.0
+fallingGravity = 1000
+horizontalMovementSpeed = 100
+verticalMovementSpeed = 50
+jumpReleaseForce = -30
+friction = 10
+acceleration = 10
+maxGrav = 500
+doubleJumpForce = -350
+maxDoubleJumps = 1
+groundSlamVelocity = 5
+slideVelocity = 3000
+sprintSpeed = 150
