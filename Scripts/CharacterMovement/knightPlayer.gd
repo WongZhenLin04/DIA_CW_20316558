@@ -176,11 +176,6 @@ func _physics_process(delta):
 		# duing stance changes, make sure to reset the combos
 		fistCombo = 0
 		swordCombo = 0
-	var nSuc = "Success: " + str(success) 
-	var nFail = "Fails: " + str(fails) 
-	var res =str(nSuc) + "\n" + str(nFail)
-	fileWriter.writeFile(res,0)
-	_check_vertical_placement()
 	_check_horizontal_placement()
 	update_reward()
 

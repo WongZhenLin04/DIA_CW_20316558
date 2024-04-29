@@ -26,7 +26,7 @@ layer_0/tile_data = PackedInt32Array(-262125, 524289, 2, 917523, 65537, 1, 98305
 
 [node name="Player" parent="." instance=ExtResource("2_wmr3f")]
 z_index = 5
-position = Vector2(2798, -311)
+position = Vector2(2791, -312)
 scale = Vector2(0.992853, 1.01304)
 moveData = ExtResource("4_4oxx1")
 combo1Bonus = 4.0

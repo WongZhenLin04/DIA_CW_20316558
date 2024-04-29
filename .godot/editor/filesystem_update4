@@ -1,7 +1,5 @@
 res://Elements/world.tscn
-res://Scripts/AIController2DPlayer.gd
-res://Scripts/CharacterMovement/GroundSlamState.gd
-res://Scripts/CharacterMovement/PlayerMoveData.gd
 res://Scripts/CharacterMovement/knightPlayer.gd
-res://Elements/playerBlueAnimation.tres
+res://Scripts/CharacterMovement/PlayerMoveData.gd
+res://Scripts/AIController2DPlayer.gd
 res://godot_rl_agents_plugin-7e3efb917375c6bbc9770f5e12298ee6b4d2d284/addons/godot_rl_agents/sync.gd
